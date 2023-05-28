@@ -26,7 +26,6 @@ export default class ImagesApiService {
     return response.data;
   }
 
-    
   resetPage() {
     this.page = 1;
   }
