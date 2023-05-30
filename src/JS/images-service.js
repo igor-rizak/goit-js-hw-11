@@ -2,7 +2,7 @@ import axios from 'axios';
 // import Notiflix from 'notiflix';
 
 const API_KEY = '36675802-f1fae2e3ce3b586e4e267c1aa';
-const BASE_URL = 'https://pixabay.com/api/';
+const BASE_URL = 'pixabay.com/api/';
 
 const searchParams = new URLSearchParams({
   image_type: 'photo',
@@ -19,7 +19,7 @@ export default class ImagesApiService {
 
   async getImage() {
     const response = await axios.get(
-      `${BASE_URL}?key=${API_KEY}&q=${this.searchQuery}&${searchParams}&page=${this.page}`
+      `https://${BASE_URL}?key=${API_KEY}&q=${this.searchQuery}&${searchParams}&page=${this.page}`
     );
     this.page += 1;
 
